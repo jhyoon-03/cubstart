@@ -88,6 +88,7 @@
                         <outlet property="passwordText" destination="qKe-FF-Rwr" id="4Wu-kx-xy9"/>
                         <outlet property="usernameText" destination="6eG-WI-89A" id="BsS-41-HhF"/>
                         <segue destination="0il-0F-8KJ" kind="show" identifier="toSignUp" id="kPN-3c-W5u"/>
+                        <segue destination="f4L-5I-er4" kind="show" identifier="toProfile" id="by7-Kd-kT2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,7 +100,7 @@
             <objects>
                 <viewController id="f4L-5I-er4" customClass="ProfileViewController" customModule="bookMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2c-6a-FhZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERp-Oi-xjR">
@@ -164,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="ZRo-Dd-dyc"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.92156862750000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mHA-47-N77"/>
                     <connections>
                         <outlet property="emailTextLabel" destination="Ob8-Rw-k02" id="p8n-DH-OxQ"/>
                         <outlet property="locationTextLabel" destination="fSV-wY-hX9" id="LdK-bR-JI4"/>
@@ -474,7 +476,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W1P-T8-gu4"/>
+        <segue reference="kPN-3c-W5u"/>
         <segue reference="RXx-Gy-lcs"/>
     </inferredMetricsTieBreakers>
 </document>
