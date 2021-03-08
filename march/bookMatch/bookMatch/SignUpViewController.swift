@@ -20,8 +20,12 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     @IBAction func continueTapped(_ sender: Any) {
-        self.fullNameText = firstNameText.text!
+        let profileView : ProfileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+            profileView.fullName = firstNameText.text! + lastNameText.text!
+        profileView.universityName = universityNameText.text!
+            profileView.universityEmail = universityEmailText.text!
         performSegue(withIdentifier: "toSignUpCont", sender: self)
     }
     

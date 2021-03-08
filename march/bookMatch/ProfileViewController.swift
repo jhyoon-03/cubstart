@@ -16,11 +16,17 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var locationTextLabel: UILabel!
     
-    var fullName = ""
+    var fullName:String?
+    var universityName:String?
+    var universityEmail:String?
+    var location:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextLabel.text = "\(fullName)"
+        nameTextLabel.text = fullName
+        universityTextLabel.text = universityName
+        emailTextLabel.text = universityEmail
+        locationTextLabel.text = location
         // Do any additional setup after loading the view.
     }
     
