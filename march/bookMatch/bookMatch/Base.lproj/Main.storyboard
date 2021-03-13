@@ -80,12 +80,20 @@
                                 <color key="textColor" red="0.55294117649999996" green="0.37254901959999998" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid username or password." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyC-bQ-Fd0">
+                                <rect key="frame" x="92" y="561" width="231" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.92156862745098034" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="7kD-96-zpR"/>
                     <connections>
+                        <outlet property="invalidErrorMessage" destination="pyC-bQ-Fd0" id="EdH-JI-xek"/>
                         <outlet property="passwordText" destination="qKe-FF-Rwr" id="4Wu-kx-xy9"/>
                         <outlet property="usernameText" destination="6eG-WI-89A" id="BsS-41-HhF"/>
                         <segue destination="0il-0F-8KJ" kind="show" identifier="toSignUp" id="kPN-3c-W5u"/>
