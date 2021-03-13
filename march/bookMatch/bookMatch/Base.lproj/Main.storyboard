@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -256,12 +257,35 @@
                                     <action selector="continueTapped:" destination="0il-0F-8KJ" eventType="touchUpInside" id="wVd-DX-W3c"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-JF-6Fq">
+                                <rect key="frame" x="81" y="626" width="257" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Invalid Email Address. Please provide an &quot;@berkeley.edu&quot; address.">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemRedColor"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all fields." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ9-Gm-HJL">
+                                <rect key="frame" x="111" y="808" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lq3-X3-FYK"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.92156862745098034" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="sOZ-Bh-MdV"/>
                     <connections>
+                        <outlet property="emailErrorMessage" destination="Y7A-JF-6Fq" id="Ue0-Yl-pEu"/>
+                        <outlet property="emptyFieldErrorMessage" destination="cJ9-Gm-HJL" id="QPg-aW-tUh"/>
                         <outlet property="firstNameText" destination="5rH-2G-tZG" id="tl2-YJ-6qm"/>
                         <outlet property="lastNameText" destination="7Tc-XC-fWb" id="9QH-wn-XbR"/>
                         <outlet property="universityEmailText" destination="dZH-Wn-PRM" id="3Ss-Y5-jMz"/>
@@ -372,6 +396,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all fields." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLY-JM-34s">
+                                <rect key="frame" x="121" y="796" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37i-Jx-m7S">
+                                <rect key="frame" x="110" y="696" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bSK-0h-Cpk"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.92156862750000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -380,6 +418,8 @@
                     <connections>
                         <outlet property="cityText" destination="HgM-c1-7S3" id="5Vy-h3-03s"/>
                         <outlet property="confirmPasswordText" destination="JOm-AH-aAb" id="hsu-Au-cFq"/>
+                        <outlet property="emptyFieldErrorMessage" destination="lLY-JM-34s" id="6rf-cr-Wph"/>
+                        <outlet property="passwordConfirmationErrorMessage" destination="37i-Jx-m7S" id="lRU-ZT-HzF"/>
                         <outlet property="passwordText" destination="sSV-KR-466" id="3uI-z0-IDZ"/>
                         <outlet property="stateText" destination="7K8-Wp-3Yf" id="f5l-sb-gIZ"/>
                         <outlet property="zipcodeText" destination="ISE-2c-iMJ" id="oWb-Zf-kR2"/>
@@ -478,4 +518,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="GyF-GM-J4c"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

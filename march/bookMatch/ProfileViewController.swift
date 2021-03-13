@@ -19,11 +19,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var locationTextLabel: UILabel!
     
-    var fullName:String?
-    var universityName:String?
-    var universityEmail:String?
-    var location:String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextLabel.text = signUpViewController.getFullName()

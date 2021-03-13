@@ -87,9 +87,9 @@
 		98DDD48725F4657700EC7A3D = {
 			isa = PBXGroup;
 			children = (
+				98DDD4CF25F4997700EC7A3D /* SignUpContViewController.swift */,
 				98DDD4D925F4A16200EC7A3D /* ProfileViewController.swift */,
 				98DDD4D425F49C6800EC7A3D /* EmailConfirmViewController.swift */,
-				98DDD4CF25F4997700EC7A3D /* SignUpContViewController.swift */,
 				98DDD49225F4657700EC7A3D /* bookMatch */,
 				98DDD4A925F4657900EC7A3D /* bookMatchTests */,
 				98DDD4B425F4657900EC7A3D /* bookMatchUITests */,
