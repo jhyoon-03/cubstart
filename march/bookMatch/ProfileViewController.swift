@@ -8,6 +8,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    var signUpViewController = SignUpViewController()
+    
     @IBOutlet weak var nameTextLabel: UILabel!
     
     @IBOutlet weak var universityTextLabel: UILabel!
@@ -23,9 +25,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextLabel.text = fullName
-        universityTextLabel.text = universityName
-        emailTextLabel.text = universityEmail
+        nameTextLabel.text = signUpViewController.getFullName()
+        universityTextLabel.text = signUpViewController.getUniversityName()
+        emailTextLabel.text = signUpViewController.getUniversityEmail()
         locationTextLabel.text = location
         // Do any additional setup after loading the view.
     }
