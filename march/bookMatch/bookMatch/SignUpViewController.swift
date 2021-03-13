@@ -13,9 +13,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var universityNameText: UITextField!
     @IBOutlet weak var universityEmailText: UITextField!
     
-    var fullNameText: String = ""
-    var universityName: String = ""
-    var universityEmail: String = ""
+    static var fullNameText: String = ""
+    static var universityName: String = ""
+    static var universityEmail: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,22 +24,22 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func continueTapped(_ sender: Any) {
-        fullNameText = firstNameText.text! + lastNameText.text!
-        universityName = universityNameText.text!
-        universityEmail = universityEmailText.text!
+        SignUpViewController.fullNameText = firstNameText.text! + " " + lastNameText.text!
+        SignUpViewController.universityName = universityNameText.text!
+        SignUpViewController.universityEmail = universityEmailText.text!
         performSegue(withIdentifier: "toSignUpCont", sender: self)
     }
     
     func getFullName() -> String {
-        return fullNameText
+        return SignUpViewController.fullNameText
     }
     
     func getUniversityName() -> String {
-        return universityName
+        return SignUpViewController.universityName
     }
     
     func getUniversityEmail() -> String {
-        return universityEmail
+        return SignUpViewController.universityEmail
     }
 
 }

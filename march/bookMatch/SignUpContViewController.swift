@@ -15,6 +15,7 @@ class SignUpContViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var confirmPasswordText: UITextField!
     
+    static var location: String = ""
     
     
     override func viewDidLoad() {
@@ -23,9 +24,13 @@ class SignUpContViewController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: Any) {
+        SignUpContViewController.location = cityText.text! + ", " + stateText.text!
         performSegue(withIdentifier: "toEmailConfirm", sender: self)
         
     }
     
+    func getLocation() -> String {
+        return SignUpContViewController.location
+    }
 
 }

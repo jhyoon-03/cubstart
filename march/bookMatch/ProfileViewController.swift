@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     var signUpViewController = SignUpViewController()
+    var signUpContController = SignUpContViewController()
     
     @IBOutlet weak var nameTextLabel: UILabel!
     
@@ -28,7 +29,7 @@ class ProfileViewController: UIViewController {
         nameTextLabel.text = signUpViewController.getFullName()
         universityTextLabel.text = signUpViewController.getUniversityName()
         emailTextLabel.text = signUpViewController.getUniversityEmail()
-        locationTextLabel.text = location
+        locationTextLabel.text = signUpContController.getLocation()
         // Do any additional setup after loading the view.
     }
     
