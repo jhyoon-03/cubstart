@@ -418,6 +418,20 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password must contain a special character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDP-c4-gen">
+                                <rect key="frame" x="44" y="696" width="325" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password must be at least 8 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1T-gB-2Ey">
+                                <rect key="frame" x="44.5" y="696" width="325" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bSK-0h-Cpk"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.92156862750000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -428,6 +442,8 @@
                         <outlet property="confirmPasswordText" destination="JOm-AH-aAb" id="hsu-Au-cFq"/>
                         <outlet property="emptyFieldErrorMessage" destination="lLY-JM-34s" id="6rf-cr-Wph"/>
                         <outlet property="passwordConfirmationErrorMessage" destination="37i-Jx-m7S" id="lRU-ZT-HzF"/>
+                        <outlet property="passwordLengthMessage" destination="c1T-gB-2Ey" id="aXw-Sd-0Us"/>
+                        <outlet property="passwordSpecialCharacterMessage" destination="tDP-c4-gen" id="BGM-4E-8EF"/>
                         <outlet property="passwordText" destination="sSV-KR-466" id="3uI-z0-IDZ"/>
                         <outlet property="stateText" destination="7K8-Wp-3Yf" id="f5l-sb-gIZ"/>
                         <outlet property="zipcodeText" destination="ISE-2c-iMJ" id="oWb-Zf-kR2"/>
