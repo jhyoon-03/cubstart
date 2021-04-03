@@ -172,7 +172,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZRo-Dd-dyc"/>
-                        <color key="backgroundColor" red="0.98431372549999996" green="0.92156862750000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.92681628469999999" blue="0.3606100082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="mHA-47-N77"/>
                     <connections>
