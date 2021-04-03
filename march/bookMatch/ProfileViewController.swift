@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailTextLabel: UILabel!
     
     @IBOutlet weak var locationTextLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
