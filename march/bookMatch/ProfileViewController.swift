@@ -21,31 +21,31 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(VerticalView(frame: self.view.bounds))
         nameTextLabel.text = signUpViewController.getFullName()
         universityTextLabel.text = signUpViewController.getUniversityName()
         emailTextLabel.text = signUpViewController.getUniversityEmail()
         locationTextLabel.text = signUpContController.getLocation()
-        self.view.addSubview(VerticalView(frame: self.view.bounds))
         // Do any additional setup after loading the view.
     }
-    
-    class VerticalView: UIView {
-        override func draw(_ rect: CGRect) {
-            super.draw(rect)
-            
-            let customYellow = UIColor(red: 250/255, green: 236/255, blue: 92/255, alpha: 1)
-            let bottomRect = CGRect(x: 0, y: rect.size.height / 3, width: rect.size.width, height: (rect.size.height / 3) * 2)
-            customYellow.set();
-            guard let bottomContext = UIGraphicsGetCurrentContext() else { return }
-            bottomContext.fill(bottomRect)
-            
-            let topRect = CGRect(x: 0, y: 0, width: rect.size.width, height: rect.size.height / 3)
-            UIColor.white.set()
-            guard let topContext = UIGraphicsGetCurrentContext() else { return }
-            topContext.fill(topRect)
-        }
+}
+
+class VerticalView: UIView {
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        let customYellow = UIColor(red: 250/255, green: 236/255, blue: 92/255, alpha: 1)
+        let bottomRect = CGRect(x: 0, y: rect.size.height / 3, width: rect.size.width, height: (rect.size.height / 3) * 2)
+        customYellow.set();
+        guard let bottomContext = UIGraphicsGetCurrentContext() else { return }
+        bottomContext.fill(bottomRect)
+        
+        let topRect = CGRect(x: 0, y: 0, width: rect.size.width, height: rect.size.height / 3)
+        UIColor.white.set()
+        guard let topContext = UIGraphicsGetCurrentContext() else { return }
+        topContext.fill(topRect)
     }
-    
+}
 
     /*
     // MARK: - Navigation
@@ -56,5 +56,3 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
