@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(VerticalView(frame: self.view.bounds))
+        //self.view.addSubview(VerticalView(frame: self.view.bounds))
         nameTextLabel.text = signUpViewController.getFullName()
         universityTextLabel.text = signUpViewController.getUniversityName()
         emailTextLabel.text = signUpViewController.getUniversityEmail()
@@ -33,6 +33,10 @@ class ProfileViewController: UIViewController {
     
 }
 
+/*
+ This class is an attempt to split the background color to make the design similar to our Figma file,
+but I am not able to get the buttons/labels to show up on top yet
+ */
 class VerticalView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)

@@ -29,7 +29,9 @@ class ViewController: UIViewController {
         }
         else {
             invalidErrorMessage.isHidden = true
-            performSegue(withIdentifier: "toProfile", sender: self)
+            performSegue(withIdentifier: "toTabBar", sender: self)
+            //performSegue(withIdentifier: "toProfile", sender: self)
+            //The toProfile segue is now unneccessary since we want to segue to the tab bar controller but I will leave it here in case the tab bar idea does not work
         }
     }
     

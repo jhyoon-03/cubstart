@@ -15,8 +15,10 @@ class EmailConfirmViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     @IBAction func loginToPortalButton(_ sender: Any) {
         performSegue(withIdentifier: "toLogin", sender: self)
+        //performSegue(withIdentifier: "toLogin", sender: self)
     }
     
 
