@@ -29,13 +29,15 @@ class ProfileViewController: UIViewController {
         locationTextLabel.text = signUpContController.getLocation()
         // Do any additional setup after loading the view.
     }
+    
+    
 }
 
 class VerticalView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let customYellow = UIColor(red: 250/255, green: 236/255, blue: 92/255, alpha: 1)
+        let customYellow = UIColor(red: 251/255, green: 239/255, blue: 87/255, alpha: 1)
         let bottomRect = CGRect(x: 0, y: rect.size.height / 3, width: rect.size.width, height: (rect.size.height / 3) * 2)
         customYellow.set();
         guard let bottomContext = UIGraphicsGetCurrentContext() else { return }

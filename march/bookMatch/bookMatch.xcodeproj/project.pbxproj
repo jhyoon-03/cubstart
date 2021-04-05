@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6653C9BF261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
+		6653C9C0261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
+		6653C9C1261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
 		98DDD49425F4657700EC7A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49325F4657700EC7A3D /* AppDelegate.swift */; };
 		98DDD49625F4657700EC7A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49525F4657700EC7A3D /* SceneDelegate.swift */; };
 		98DDD49825F4657700EC7A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49725F4657700EC7A3D /* ViewController.swift */; };
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6653C9BE261A57470078A3FC /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		98DDD49025F4657700EC7A3D /* bookMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DDD49325F4657700EC7A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98DDD49525F4657700EC7A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				98DDD4CF25F4997700EC7A3D /* SignUpContViewController.swift */,
 				98DDD4D925F4A16200EC7A3D /* ProfileViewController.swift */,
 				98DDD4D425F49C6800EC7A3D /* EmailConfirmViewController.swift */,
+				6653C9BE261A57470078A3FC /* ShopViewController.swift */,
 				98DDD49225F4657700EC7A3D /* bookMatch */,
 				98DDD4A925F4657900EC7A3D /* bookMatchTests */,
 				98DDD4B425F4657900EC7A3D /* bookMatchUITests */,
@@ -274,6 +279,7 @@
 				98DDD49825F4657700EC7A3D /* ViewController.swift in Sources */,
 				98DDD49425F4657700EC7A3D /* AppDelegate.swift in Sources */,
 				98DDD4D025F4997700EC7A3D /* SignUpContViewController.swift in Sources */,
+				6653C9BF261A57470078A3FC /* ShopViewController.swift in Sources */,
 				98DDD4DA25F4A16200EC7A3D /* ProfileViewController.swift in Sources */,
 				98DDD4CB25F46BFD00EC7A3D /* SignUpViewController.swift in Sources */,
 				98DDD49625F4657700EC7A3D /* SceneDelegate.swift in Sources */,
@@ -284,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6653C9C0261A57470078A3FC /* ShopViewController.swift in Sources */,
 				98DDD4AB25F4657900EC7A3D /* bookMatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6653C9C1261A57470078A3FC /* ShopViewController.swift in Sources */,
 				98DDD4B625F4657900EC7A3D /* bookMatchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
