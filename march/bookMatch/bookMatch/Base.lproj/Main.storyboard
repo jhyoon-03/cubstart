@@ -218,6 +218,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Shop" image="cart" catalog="system" id="qIJ-Lo-OFg"/>
                     <navigationItem key="navigationItem" id="Vim-GU-gXq"/>
+                    <connections>
+                        <outlet property="shopSearchBar" destination="YLa-BJ-Iou" id="rWP-w2-dgn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4e-SU-5bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,7 +229,6 @@
         <!--Item-->
         <scene sceneID="jL8-2e-Ozv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hIg-N3-lWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="oTN-TD-cj2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="CdC-v3-rYf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dwo-7j-E1s">
@@ -237,13 +239,13 @@
                         <segue destination="l2h-Fh-nUK" kind="relationship" relationship="rootViewController" id="2L8-bQ-Lx4"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIg-N3-lWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2536" y="1507"/>
         </scene>
         <!--Item-->
         <scene sceneID="n4n-Wq-hh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="it5-tJ-hTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="mgV-Zp-GeG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="YLR-QT-7Go"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wes-4W-HRc">
@@ -254,6 +256,7 @@
                         <segue destination="f4L-5I-er4" kind="relationship" relationship="rootViewController" id="0Q1-Tq-0Ao"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="it5-tJ-hTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="284" y="1465"/>
         </scene>
@@ -631,7 +634,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W1P-T8-gu4"/>
         <segue reference="0Q1-Tq-0Ao"/>
         <segue reference="RXx-Gy-lcs"/>
     </inferredMetricsTieBreakers>

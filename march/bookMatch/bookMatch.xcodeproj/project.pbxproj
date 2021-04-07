@@ -10,6 +10,7 @@
 		6653C9BF261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
 		6653C9C0261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
 		6653C9C1261A57470078A3FC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653C9BE261A57470078A3FC /* ShopViewController.swift */; };
+		66F1BEB7261E66BE007AFA20 /* ShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F1BEB6261E66BE007AFA20 /* ShopTableViewCell.xib */; };
 		98DDD49425F4657700EC7A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49325F4657700EC7A3D /* AppDelegate.swift */; };
 		98DDD49625F4657700EC7A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49525F4657700EC7A3D /* SceneDelegate.swift */; };
 		98DDD49825F4657700EC7A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DDD49725F4657700EC7A3D /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		6653C9BE261A57470078A3FC /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		66F1BEB6261E66BE007AFA20 /* ShopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopTableViewCell.xib; sourceTree = "<group>"; };
 		98DDD49025F4657700EC7A3D /* bookMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DDD49325F4657700EC7A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98DDD49525F4657700EC7A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		98DDD48725F4657700EC7A3D = {
 			isa = PBXGroup;
 			children = (
+				66F1BEB6261E66BE007AFA20 /* ShopTableViewCell.xib */,
 				98DDD4CF25F4997700EC7A3D /* SignUpContViewController.swift */,
 				98DDD4D925F4A16200EC7A3D /* ProfileViewController.swift */,
 				98DDD4D425F49C6800EC7A3D /* EmailConfirmViewController.swift */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DDD4A025F4657800EC7A3D /* LaunchScreen.storyboard in Resources */,
+				66F1BEB7261E66BE007AFA20 /* ShopTableViewCell.xib in Resources */,
 				98DDD49D25F4657800EC7A3D /* Assets.xcassets in Resources */,
 				98DDD49B25F4657700EC7A3D /* Main.storyboard in Resources */,
 			);

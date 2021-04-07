@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="169" id="Kx3-Fh-cyt" customClass="ShopTableViewCell" customModule="bookMatch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kx3-Fh-cyt" id="5nB-U7-Z1g">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2al-ag-r43">
+                        <rect key="frame" x="20" y="19" width="130" height="130"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title of Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUq-O5-K7r">
+                        <rect key="frame" x="167" y="19" width="118" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jde-8G-9L3">
+                        <rect key="frame" x="167" y="48" width="101" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1M-eC-Vk8">
+                        <rect key="frame" x="352" y="128" width="49" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" systemColor="systemGreenColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN: 123-4-56-78901-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-49-AUs">
+                        <rect key="frame" x="167" y="77" width="174" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iUq-O5-K7r" firstAttribute="leading" secondItem="2al-ag-r43" secondAttribute="trailing" constant="17" id="E9A-MG-Tr9"/>
+                    <constraint firstItem="2al-ag-r43" firstAttribute="leading" secondItem="5nB-U7-Z1g" secondAttribute="leading" constant="20" symbolic="YES" id="FW7-CH-zQQ"/>
+                    <constraint firstAttribute="bottom" secondItem="2al-ag-r43" secondAttribute="bottom" constant="20" symbolic="YES" id="IKE-mS-zMz"/>
+                    <constraint firstItem="iUq-O5-K7r" firstAttribute="top" secondItem="5nB-U7-Z1g" secondAttribute="top" constant="19" id="Ndj-5o-UAI"/>
+                    <constraint firstItem="jde-8G-9L3" firstAttribute="top" secondItem="iUq-O5-K7r" secondAttribute="bottom" constant="5" id="W8i-jO-x9c"/>
+                    <constraint firstItem="jde-8G-9L3" firstAttribute="leading" secondItem="2al-ag-r43" secondAttribute="trailing" constant="17" id="eBX-hM-ccZ"/>
+                    <constraint firstAttribute="trailing" secondItem="s1M-eC-Vk8" secondAttribute="trailing" constant="13" id="fXJ-64-hHg"/>
+                    <constraint firstAttribute="bottom" secondItem="s1M-eC-Vk8" secondAttribute="bottom" constant="17" id="wH9-zb-IFf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="authorLabel" destination="jde-8G-9L3" id="od4-eO-Fh3"/>
+                <outlet property="isbnLabel" destination="nVg-49-AUs" id="o4u-Sa-Lrn"/>
+                <outlet property="priceLabel" destination="s1M-eC-Vk8" id="CZS-4I-byS"/>
+                <outlet property="productImageView" destination="2al-ag-r43" id="b8L-VI-ADh"/>
+                <outlet property="titleLabel" destination="iUq-O5-K7r" id="zkX-IZ-jz8"/>
+                <outletCollection property="gestureRecognizers" destination="har-CH-Fh6" appends="YES" id="hfm-dg-pxO"/>
+            </connections>
+            <point key="canvasLocation" x="-5494" y="215"/>
+        </tableViewCell>
+        <tapGestureRecognizer id="har-CH-Fh6">
+            <connections>
+                <action selector="selectProduct:" destination="Kx3-Fh-cyt" id="Ipe-vw-mpV"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
