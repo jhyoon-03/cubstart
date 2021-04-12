@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameText: UITextField!
@@ -55,6 +56,7 @@ class SignUpViewController: UIViewController {
             SignUpViewController.fullNameText = firstNameText.text! + " " + lastNameText.text!
             SignUpViewController.universityName = universityNameText.text!
             SignUpViewController.universityEmail = universityEmailText.text!
+            
             emailErrorMessage.isHidden = true
             emptyFieldErrorMessage.isHidden = true
             performSegue(withIdentifier: "toSignUpCont", sender: self)

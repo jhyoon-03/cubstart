@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
     var signUpViewController = SignUpViewController()
@@ -22,10 +23,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = Auth.auth().currentUser
         //self.view.addSubview(VerticalView(frame: self.view.bounds))
         nameTextLabel.text = signUpViewController.getFullName()
         universityTextLabel.text = signUpViewController.getUniversityName()
-        emailTextLabel.text = signUpViewController.getUniversityEmail()
+        emailTextLabel.text = user?.email
         locationTextLabel.text = signUpContController.getLocation()
         // Do any additional setup after loading the view.
     }
