@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'bookMatch' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for bookMatch
+  pod 'FirebaseUI'
+
+  target 'bookMatchTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'bookMatchUITests' do
+    # Pods for testing
+  end
+
+end

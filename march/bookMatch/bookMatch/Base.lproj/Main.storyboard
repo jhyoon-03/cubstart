@@ -634,6 +634,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="W1P-T8-gu4"/>
         <segue reference="0Q1-Tq-0Ao"/>
         <segue reference="RXx-Gy-lcs"/>
     </inferredMetricsTieBreakers>
