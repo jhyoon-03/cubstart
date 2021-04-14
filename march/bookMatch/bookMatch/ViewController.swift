@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var usernameText: UITextField!

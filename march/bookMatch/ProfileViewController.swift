@@ -12,6 +12,8 @@ class ProfileViewController: UIViewController {
     var signUpViewController = SignUpViewController()
     var signUpContController = SignUpContViewController()
     
+    @IBOutlet weak var profilePhoto: UIImageView!
+    
     @IBOutlet weak var nameTextLabel: UILabel!
     
     @IBOutlet weak var universityTextLabel: UILabel!
@@ -32,6 +34,11 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func bellButton(_ sender: Any) {
+    }
+    
+    @IBAction func cartButton(_ sender: Any) {
+    }
     
 }
 
