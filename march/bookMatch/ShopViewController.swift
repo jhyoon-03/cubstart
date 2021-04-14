@@ -34,7 +34,19 @@ class ShopViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Displays academics, recruitment, and recreational most trending books (view Figma)
+    @IBOutlet weak var trendTable: UITableView!
+    
     @IBOutlet weak var shopSearchBar: UISearchBar!
+    
+    
+    @IBAction func bellButton(_ sender: Any) {
+    }
+    @IBAction func cartButton(_ sender: Any) {
+    }
+    
+    @IBAction func searchButton(_ sender: Any) {
+    }
     
     /*
     // MARK: - Navigation

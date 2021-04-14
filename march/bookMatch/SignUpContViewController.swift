@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpContViewController: UIViewController {
     @IBOutlet weak var cityText: UITextField!
@@ -18,6 +19,8 @@ class SignUpContViewController: UIViewController {
     @IBOutlet weak var passwordConfirmationErrorMessage: UILabel!
     @IBOutlet weak var passwordSpecialCharacterMessage: UILabel!
     @IBOutlet weak var passwordLengthMessage: UILabel!
+    
+    var signUpViewController = SignUpViewController()
     
     // store profile information
     static var location: String = ""
@@ -76,6 +79,24 @@ class SignUpContViewController: UIViewController {
         }
         else {
             SignUpContViewController.location = cityText.text! + ", " + stateText.text!
+            
+            let email = signUpViewController.getUniversityEmail()
+            let password = passwordText.text
+            Auth.auth().createUser(withEmail: email, password: password!) { authResult, error in
+                if let error = error as NSError? {
+                switch AuthErrorCode(rawValue: error.code) {
+                case .emailAlreadyInUse: break
+                  // Error: The email address is already in use by another account. Break for now but should display some sort of error message
+                default:
+                    print("Error: \(error.localizedDescription)")
+                }
+              } else {
+                print("User signs up successfully")
+                let newUserInfo = Auth.auth().currentUser
+                let email = newUserInfo?.email
+              }
+            }
+            
             emptyFieldErrorMessage.isHidden = true
             passwordConfirmationErrorMessage.isHidden = true
             passwordSpecialCharacterMessage.isHidden = true
