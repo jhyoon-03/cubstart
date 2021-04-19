@@ -11,8 +11,10 @@
 #endif
 
 #import "GULAppDelegateSwizzler.h"
+#import "GULApplication 2.h"
 #import "GULApplication.h"
 #import "GULSceneDelegateSwizzler.h"
+#import "GULAppEnvironmentUtil 2.h"
 #import "GULAppEnvironmentUtil.h"
 #import "GULHeartbeatDateStorage.h"
 #import "GULKeychainStorage.h"
@@ -24,6 +26,7 @@
 #import "GULLoggerLevel.h"
 #import "GULOriginalIMPConvenienceMacros.h"
 #import "GULSwizzler.h"
+#import "GULNSData+zlib 2.h"
 #import "GULNSData+zlib.h"
 #import "GULMutableDictionary.h"
 #import "GULNetwork.h"
@@ -31,6 +34,7 @@
 #import "GULNetworkLoggerProtocol.h"
 #import "GULNetworkMessageCode.h"
 #import "GULNetworkURLSession.h"
+#import "GULReachabilityChecker 2.h"
 #import "GULReachabilityChecker.h"
 #import "GULUserDefaults.h"
 
