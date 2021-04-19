@@ -22,7 +22,6 @@ class ShopTableViewCell: UITableViewCell {
     //When the user taps on the cell, the application will take them to the product page for that product
     @IBAction func selectProduct(_ sender: Any) {
     }
-    
 }
 
 //The view controller for the show page of the application
@@ -42,11 +41,15 @@ class ShopViewController: UIViewController {
     
     @IBAction func bellButton(_ sender: Any) {
     }
+    
+    @IBAction func searchButton(_ sender: Any) {
+        performSegue(withIdentifier: "toItemFocusView", sender: self)
+    }
+    
     @IBAction func cartButton(_ sender: Any) {
     }
     
-    @IBAction func searchButton(_ sender: Any) {
-    }
+    
     
     /*
     // MARK: - Navigation
