@@ -82,7 +82,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -112,6 +112,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: a4b88d0d379111f27faa3d0efc22e2ce83f79ebf
+PODFILE CHECKSUM: e118eb4c6e33a0f7732c646649d6b47a798548df
 
 COCOAPODS: 1.10.1
