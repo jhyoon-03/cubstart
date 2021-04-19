@@ -6,8 +6,8 @@ target 'bookMatch' do
   use_frameworks!
 
   # Pods for bookMatch
-  pod 'FirebaseUI'
-  pod 'Firebase/Analytics'
+    pod 'FirebaseUI/Auth'
+    pod 'Firebase/Analytics'
 
   target 'bookMatchTests' do
     inherit! :search_paths
