@@ -23,7 +23,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // Default conformance to the FBSDKGraphRequestConnecting protocol
-@interface FBSDKGraphRequestConnection (ConnectionProviding) <FBSDKGraphRequestConnecting>
+@interface FBSDKGraphRequestConnection (ConnectionProviding) <FBSDKGraphRequestConnectionDelegate>
 @end
 
 NS_ASSUME_NONNULL_END

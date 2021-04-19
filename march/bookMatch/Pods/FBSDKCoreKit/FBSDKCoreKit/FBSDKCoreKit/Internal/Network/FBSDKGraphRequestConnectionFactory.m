@@ -23,7 +23,7 @@
 
 @implementation FBSDKGraphRequestConnectionFactory
 
-- (nonnull id<FBSDKGraphRequestConnecting>)createGraphRequestConnection
+- (nonnull id<FBSDKGraphRequestConnection>)createGraphRequestConnection
 {
   return [FBSDKGraphRequestConnection new];
 }
