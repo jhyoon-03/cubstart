@@ -7,10 +7,16 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+//    var ref: DatabaseReference! = Database.database().reference()
+    
+//    override init() {
+//        FirebaseApp.configure()
+//        Database.database().isPersistenceEnabled = true
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()

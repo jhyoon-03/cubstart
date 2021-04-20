@@ -268,8 +268,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go!"/>
                                 <connections>
-                                    <action selector="searchButton:" destination="l2h-Fh-nUK" eventType="touchUpInside" id="4Se-NP-Tuo"/>
-                                    <segue destination="g4I-Du-BtL" kind="show" id="lmL-D9-Ncg"/>
+                                    <action selector="searchButton:" destination="l2h-Fh-nUK" eventType="touchUpInside" id="gne-wW-PSC"/>
+                                    <segue destination="g4I-Du-BtL" kind="show" identifier="toItemFocusView" id="vor-17-OMk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -279,7 +279,6 @@
                     <tabBarItem key="tabBarItem" title="Shop" image="cart" catalog="system" id="qIJ-Lo-OFg"/>
                     <navigationItem key="navigationItem" id="Vim-GU-gXq"/>
                     <connections>
-                        <outlet property="searchButton" destination="puE-ws-OrA" id="XHB-iy-brQ"/>
                         <outlet property="shopSearchBar" destination="YLa-BJ-Iou" id="rWP-w2-dgn"/>
                         <outlet property="trendTable" destination="Y1H-pr-X1q" id="8Ef-pb-byL"/>
                     </connections>
@@ -420,7 +419,6 @@
                         <outlet property="isbnLabel" destination="4D5-Yz-cay" id="sD3-WW-tXO"/>
                         <outlet property="locationLabel" destination="Afi-2v-xU1" id="c8d-Ng-knB"/>
                         <outlet property="priceLabel" destination="znZ-Jd-Fu6" id="LZG-0L-fji"/>
-                        <outlet property="searchBar" destination="Juo-Jt-Gd7" id="yR8-jj-kPf"/>
                         <outlet property="searchedBookInfo" destination="FFm-rn-9Yf" id="3La-d9-qIk"/>
                         <outlet property="sellerUsernameLabel" destination="a4I-yQ-oxo" id="acw-hB-KYN"/>
                         <outlet property="shopSearchBar" destination="Juo-Jt-Gd7" id="9Ie-ET-Rqx"/>
@@ -1368,9 +1366,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QBb-u9-PxL"/>
-        <segue reference="r1R-1g-yCt"/>
-        <segue reference="0Q1-Tq-0Ao"/>
+        <segue reference="Dun-lq-fao"/>
+        <segue reference="vor-17-OMk"/>
+        <segue reference="by7-Kd-kT2"/>
         <segue reference="RXx-Gy-lcs"/>
     </inferredMetricsTieBreakers>
     <resources>
