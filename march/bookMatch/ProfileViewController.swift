@@ -11,6 +11,8 @@ import Firebase
 class ProfileViewController: UIViewController {
     var signUpViewController = SignUpViewController()
     var signUpContController = SignUpContViewController()
+    var ref = DatabaseReference()
+
     
     @IBOutlet weak var profilePhoto: UIImageView!
     
@@ -25,6 +27,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         let user = Auth.auth().currentUser
         //self.view.addSubview(VerticalView(frame: self.view.bounds))
         nameTextLabel.text = signUpViewController.getFullName()

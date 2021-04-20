@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAnalytics
 
 class SignUpContViewController: UIViewController {
     @IBOutlet weak var cityText: UITextField!
@@ -82,7 +83,7 @@ class SignUpContViewController: UIViewController {
             
             let email = signUpViewController.getUniversityEmail()
             let password = passwordText.text
-            Auth.auth().createUser(withEmail: email, password: password!) { authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password!) { [self] authResult, error in
                 if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
                 case .emailAlreadyInUse: break
@@ -93,9 +94,27 @@ class SignUpContViewController: UIViewController {
               } else {
                 print("User signs up successfully")
                 let newUserInfo = Auth.auth().currentUser
-                let email = newUserInfo?.email
+                let ref: DatabaseReference! = Database.database().reference()
+                var userDictionary: [String: Any] = [:]
+                var dataDictionary: [String: Any] = [:]
+                dataDictionary["name"] = signUpViewController.getFullName()
+                dataDictionary["university"] = signUpViewController.getUniversityName()
+                dataDictionary["location"] = getLocation()
+                dataDictionary["email"] = signUpViewController.getUniversityEmail()
+                userDictionary[newUserInfo!.uid] = dataDictionary
+                
+                ref.setValue(userDictionary)
+                
+//                self.ref.child("users").child(newUserInfo!.uid).setValue(["name":signUpViewController.getFullName()])
+//                self.ref.child("users").child(newUserInfo!.uid).setValue(["university":signUpViewController.getUniversityName()])
+//                self.ref.child("users").child(newUserInfo!.uid).setValue(["location":getLocation()])
+//                self.ref.child("users").child(newUserInfo!.uid).setValue(["email":signUpViewController.getUniversityEmail()])
               }
             }
+            
+            
+            
+            
             
             emptyFieldErrorMessage.isHidden = true
             passwordConfirmationErrorMessage.isHidden = true
