@@ -9,8 +9,10 @@ target 'bookMatch' do
 
   # Pods for bookMatch
     pod 'FirebaseUI/Auth'
-    pod 'Firebase/Analytics'
     pod 'Firebase/Database'
+    pod 'Firebase/Core', '~> 6.2'
+    pod 'Firebase/Firestore'
+    pod 'FirebaseFirestoreSwift'
 
   target 'bookMatchTests' do
     inherit! :search_paths

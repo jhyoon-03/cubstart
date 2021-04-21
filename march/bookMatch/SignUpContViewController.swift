@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAnalytics
 
 class SignUpContViewController: UIViewController {
     @IBOutlet weak var cityText: UITextField!
@@ -22,6 +21,7 @@ class SignUpContViewController: UIViewController {
     @IBOutlet weak var passwordLengthMessage: UILabel!
     
     var signUpViewController = SignUpViewController()
+    let db = Firestore.firestore()
     
     // store profile information
     static var location: String = ""
@@ -94,16 +94,28 @@ class SignUpContViewController: UIViewController {
               } else {
                 print("User signs up successfully")
                 let newUserInfo = Auth.auth().currentUser
-                let ref: DatabaseReference! = Database.database().reference()
-                var userDictionary: [String: Any] = [:]
-                var dataDictionary: [String: Any] = [:]
-                dataDictionary["name"] = signUpViewController.getFullName()
-                dataDictionary["university"] = signUpViewController.getUniversityName()
-                dataDictionary["location"] = getLocation()
-                dataDictionary["email"] = signUpViewController.getUniversityEmail()
-                userDictionary[newUserInfo!.uid] = dataDictionary
-                
-                ref.setValue(userDictionary)
+                db.collection("users").document(newUserInfo!.uid).setData([
+                    "name": signUpViewController.getFullName(),
+                    "university": signUpViewController.getUniversityName(),
+                    "location": getLocation(),
+                    "email":signUpViewController.getUniversityEmail()
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+//                let ref: DatabaseReference! = Database.database().reference()
+//                var userDictionary: [String: Any] = [:]
+//                var dataDictionary: [String: Any] = [:]
+//                dataDictionary["name"] = signUpViewController.getFullName()
+//                dataDictionary["university"] = signUpViewController.getUniversityName()
+//                dataDictionary["location"] = getLocation()
+//                dataDictionary["email"] = signUpViewController.getUniversityEmail()
+//                userDictionary[newUserInfo!.uid] = dataDictionary
+//
+//                ref.setValue(userDictionary)
                 
 //                self.ref.child("users").child(newUserInfo!.uid).setValue(["name":signUpViewController.getFullName()])
 //                self.ref.child("users").child(newUserInfo!.uid).setValue(["university":signUpViewController.getUniversityName()])

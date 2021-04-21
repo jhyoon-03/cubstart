@@ -57,6 +57,14 @@ class ProfileViewController: UIViewController {
     @IBAction func cartButton(_ sender: Any) {
     }
     
+    func signOut() {
+        do {
+          try Auth.auth().signOut()
+        } catch {
+          print("Sign out error")
+        }
+    }
+    
 }
 
 /*
