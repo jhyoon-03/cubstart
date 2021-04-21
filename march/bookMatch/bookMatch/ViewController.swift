@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var invalidErrorMessage: UILabel!
+    @IBOutlet weak var invalidEmailErrorMessage: UILabel!
     
     override func viewDidLoad() {
         if isUserLoggedIn() {
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         }
         super.viewDidLoad()
         invalidErrorMessage.isHidden = true
+        invalidEmailErrorMessage.isHidden = true
     }
 
     // check if a text field is filled out or not
@@ -36,6 +38,9 @@ class ViewController: UIViewController {
         if emptyChecker(text: usernameText) || emptyChecker(text: passwordText) {
             invalidErrorMessage.isHidden = false
         }
+        
+        // TO DO: Show invalid email error message if email not end in '@berkeley.edu' (Extract range -13 to end)
+            
         else {
             let email = usernameText.text!
             let password = passwordText.text!
@@ -60,6 +65,7 @@ class ViewController: UIViewController {
               }
             }
             invalidErrorMessage.isHidden = true
+            invalidEmailErrorMessage.isHidden = true
             performSegue(withIdentifier: "toTabBar", sender: self)
             //performSegue(withIdentifier: "toProfile", sender: self)
             //The toProfile segue is now unneccessary since we want to segue to the tab bar controller but I will leave it here in case the tab bar idea does not work

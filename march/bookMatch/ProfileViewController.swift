@@ -23,7 +23,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailTextLabel: UILabel!
     
     @IBOutlet weak var locationTextLabel: UILabel!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +34,21 @@ class ProfileViewController: UIViewController {
         emailTextLabel.text = user?.email
         locationTextLabel.text = signUpContController.getLocation()
         // Do any additional setup after loading the view.
+        
+        // Displays empty words if from Login page
+        if nameTextLabel.text == "" {
+            nameTextLabel.text = "Empty Name"
+        }
+        if universityTextLabel.text == "" {
+            universityTextLabel.text = "Empty University"
+        }
+        // TO DO: assign email text label to "Empty Email"
+        if locationTextLabel.text == "" {
+            locationTextLabel.text = "Empty City, State"
+        }
+        
+        // TO DO: assign profilePhoto to a default image
+        // TO DO: profilePhoto should be uploadable by user
     }
     
     @IBAction func bellButton(_ sender: Any) {
