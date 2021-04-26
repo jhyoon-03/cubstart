@@ -6,6 +6,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
+struct textbooks {
+    let title: String?
+    let author: String?
+    let isbn: String?
+    let price: Double?
+}
 
 //Each product retrieved from the database is displayed in a ShopTableViewCell in the ShopViewController
 class ShopTableViewCell: UITableViewCell {
@@ -26,10 +36,13 @@ class ShopTableViewCell: UITableViewCell {
 
 //The view controller for the show page of the application
 class ShopViewController: UIViewController {
-
+    var db: Firestore!
+    var searchQuery: String?
+    
     override func viewDidLoad() {
+        let db = Firestore.firestore()
+        //var textbooksRef = db.collection("textbooks")
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -38,17 +51,31 @@ class ShopViewController: UIViewController {
     
     @IBOutlet weak var shopSearchBar: UISearchBar!
     
+    @IBOutlet weak var shopSearchTextField: UITextField!
     
     @IBAction func bellButton(_ sender: Any) {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        performSegue(withIdentifier: "toItemFocusView", sender: self)
+        searchQuery = shopSearchTextField.text
+        getTextbooksCollection()
+        //performSegue(withIdentifier: "toItemFocusView", sender: self)
     }
     
     @IBAction func cartButton(_ sender: Any) {
     }
     
+    private func getTextbooksCollection() {
+        db.collection("textbooks").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting textbooks: \(err)")
+            } else {
+                for textbook in querySnapshot!.documents {
+                    print("\(textbook.documentID) => \(textbook.data())")
+                }
+            }
+        }
+    }
     
     
     /*
