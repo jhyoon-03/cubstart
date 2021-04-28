@@ -13,6 +13,7 @@ target 'bookMatch' do
     pod 'Firebase/Core', '~> 6.2'
     pod 'Firebase/Firestore'
     pod 'FirebaseFirestoreSwift'
+    pod 'Firebase/Analytics'
 
   target 'bookMatchTests' do
     inherit! :search_paths
