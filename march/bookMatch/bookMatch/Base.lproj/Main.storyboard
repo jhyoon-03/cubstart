@@ -280,6 +280,12 @@
                                     <segue destination="g4I-Du-BtL" kind="show" identifier="toItemFocusView" id="vor-17-OMk"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i6D-Xa-QlL">
+                                <rect key="frame" x="33" y="96" width="292" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wEX-kp-Yvs"/>
                         <color key="backgroundColor" red="0.98474055530000004" green="0.93829840419999999" blue="0.33938920500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -288,6 +294,7 @@
                     <navigationItem key="navigationItem" id="Vim-GU-gXq"/>
                     <connections>
                         <outlet property="shopSearchBar" destination="YLa-BJ-Iou" id="rWP-w2-dgn"/>
+                        <outlet property="shopSearchTextField" destination="i6D-Xa-QlL" id="kpH-YV-nZx"/>
                         <outlet property="trendTable" destination="Y1H-pr-X1q" id="8Ef-pb-byL"/>
                     </connections>
                 </viewController>
