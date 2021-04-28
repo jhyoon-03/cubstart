@@ -12,6 +12,8 @@ class ProfileViewController: UIViewController {
     var signUpViewController = SignUpViewController()
     var signUpContController = SignUpContViewController()
     var ref = DatabaseReference()
+    
+    var userInfo: [String: String] = [:]
 
     
     @IBOutlet weak var profilePhoto: UIImageView!
@@ -27,12 +29,14 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        let user = Auth.auth().currentUser
+//        let user = Auth.auth().currentUser
+        fillData()
+        fillProfile()
         //self.view.addSubview(VerticalView(frame: self.view.bounds))
-        nameTextLabel.text = signUpViewController.getFullName()
-        universityTextLabel.text = signUpViewController.getUniversityName()
-        emailTextLabel.text = user?.email
-        locationTextLabel.text = signUpContController.getLocation()
+//        nameTextLabel.text = signUpViewController.getFullName()
+//        universityTextLabel.text = signUpViewController.getUniversityName()
+//        emailTextLabel.text = user?.email
+//        locationTextLabel.text = signUpContController.getLocation()
         // Do any additional setup after loading the view.
         
         // Displays empty words if from Login page
@@ -57,6 +61,10 @@ class ProfileViewController: UIViewController {
     @IBAction func cartButton(_ sender: Any) {
     }
     
+    @IBAction func signOutButton(_ sender: Any) {
+        signOut()
+    }
+    
     func signOut() {
         do {
           try Auth.auth().signOut()
@@ -65,6 +73,42 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    func fillData() {
+        let db = Firestore.firestore()
+
+        db.collection("users").addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            
+            for document in documents {
+                if (document.isEqual(Auth.auth().currentUser?.uid)) {
+                    let data = document.data()
+                    
+                    let name = data["name"] as? String ?? ""
+                    let email = data["email"] as? String ?? ""
+                    let university = data["university"] as? String ?? ""
+                    let location = data["location"] as? String ?? ""
+                            
+                    self.userInfo.updateValue(name, forKey: "name")
+                    self.userInfo.updateValue(email, forKey: "email")
+                    self.userInfo.updateValue(university, forKey: "university")
+                    self.userInfo.updateValue(location, forKey: "location")
+                }
+            }
+            
+        }
+    }
+    
+    func fillProfile() {
+        nameTextLabel.text = self.userInfo["name"]
+        universityTextLabel.text = self.userInfo["university"]
+        emailTextLabel.text = self.userInfo["email"]
+        locationTextLabel.text = self.userInfo["location"]
+        
+    }
+ 
 }
 
 /*
