@@ -38,12 +38,14 @@ class ShopTableViewCell: UITableViewCell {
 class ShopViewController: UIViewController {
     var db: Firestore!
     var searchQuery: String?
+    var textbooksQueried = [textbooks]()
     
     override func viewDidLoad() {
         let db = Firestore.firestore()
         //var textbooksRef = db.collection("textbooks")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.trendTable.register(UINib(nibName: "ShopTableViewCell", bundle: nil), forCellReuseIdentifier: "textbookCell")
     }
     
     // Displays academics, recruitment, and recreational most trending books (view Figma)
@@ -65,13 +67,41 @@ class ShopViewController: UIViewController {
     @IBAction func cartButton(_ sender: Any) {
     }
     
-    private func getTextbooksCollection() {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return textbooksQueried.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShopTableViewCell {
+        let textbookCell = tableView.dequeueReusableCell(withIdentifier: "ShopTableViewCell")
+        
+        textbookCell.productImageView = nil
+        textbookCell.titleLabel = textbooksQueried[indexPath.row].title as? String
+        textbookCell.authorLabel = textbooksQueried[indexPath.row].author as? String
+        textbookCell.isbnLabel = textbooksQueried[indexPath.row].isbn as? String
+        textbookCell.priceLabel = textbooksQueried[indexPath.row].price as? Double
+        
+        return textbookCell
+    }
+    
+    private func getTextbooksCollection() -> Array {
         db.collection("textbooks").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting textbooks: \(err)")
             } else {
-                for textbook in querySnapshot!.documents {
-                    print("\(textbook.documentID) => \(textbook.data())")
+                textbooksQueried.removeAll()
+                for textbookReturned in querySnapshot!.documents {
+                    
+                    let data = textbookReturned.data()
+                    let title = data["title"] as? String ?? ""
+                    let author = data["author"] as? String ?? ""
+                    let isbn = data["isbn"] as? String ?? ""
+                    let price = data["price"] as? Double ?? ""
+                    let newTextbook = textbook(title: title, author: author, isbn: isbn, price: price)
+                    self.textbooksQueried.append(newTextbook)
+                    //print("\(textbook.documentID) => \(textbook.data())")
+                }
+                DispatchQueue.main.async {
+                    self.table.reloadData()
                 }
             }
         }
